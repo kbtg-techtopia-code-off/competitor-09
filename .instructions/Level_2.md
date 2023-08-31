@@ -1,15 +1,21 @@
 # Challenge Exercises
 
-Now you've had an opportunity to get started using GitHub Copilot, we have a number of challenges for you to attempt. Remember the goal here is not to test your programming abilities but rather, see how you can use GitHub Copilot to help you complete these tasks. Even if you've never programmed in Python, you may be surprised how Copilot can help you be successful with these challenge.
+Now you've had an opportunity to get started using GitHub Copilot, we have a number of challenges for you to attempt. Remember the goal here is not to test your programming abilities but rather, see how you can use GitHub Copilot to help you complete these tasks. Even if you've never done these programming tasks before, you may be surprised how Copilot can help you be successful with these challenges.
 
 
-<details>
-<summary>Challenge #1 - Adding Lizard and Spock to the game</summary>
+### Challenge #2 - Adding Lizard and Spock to the game
 
-### Adding Lizard and Spock to the game
+- Improve the rock paper scissors game by adding Lizard and Spock. Refer to this chart for the updated game logic
 
-- Improve the rock paper scissors game by adding Lizard and Spock.
-**Extra Kudos** for a terminal interface that provides a list of options with keyboard input.
+    <img width="400" alt="Adding Lizard and Spock" src="../assets/Rock Paper Scissors Lizard Spock image.jpg">
+
+- Use the same CLI output from Chellenge #1
+- Commit and push your code to git
+
+
+**Bonus!**
+
+Extra Kudos for a terminal interface that provides a list of options with keyboard input.
 Eg.
 ```
 $ Choose your option:
@@ -20,34 +26,64 @@ $ Choose your option:
 5.  Spock
 ```
 
-<img width="400" alt="Adding Lizard and Spock" src="../assets/Rock Paper Scissors Lizard Spock image.jpg">
 
-</details>
+### Challenge #3 - Adding Unit Tests
 
-<details>
-<summary>Challenge #2 - Adding Unit Tests</summary>
 
-### Adding Unit Tests
+- Implement unit tests using using any testing module of your choice.
+- Capture a screenshot of the test result and coverage, then save it in the `/testResults` folder. Name the file as "testResult".
+- Commit and push your code to git
 
-- Implement unit tests using pytest or any testing module of your choice.
-Try to aim for 100% coverage :)
 
-Business Logic:
+**Bonus**
+- Try to aim for over 80% coverage :)
 
-<img width="400" alt="Adding Lizard and Spock" src="../assets/Rock Paper Scissors Lizard Spock image.jpg">
+### Challenge #4 - Adding a REST API
 
-</details>
+> 💡 Tips: You might want to create a new file or folder for this challenge to keep your original code from Challenges 1-2.
 
-<details>
-<summary>Challenge #3 - Adding a REST API</summary>
+- Turn your program into a REST API
+- Sending a POST request (or json payload) should return a 200 OK response with the result in the body
 
-### Adding a REST API
+    Endpoint `POST /` JSON Response - 200
 
-- Turn it into a REST API
-E.g.  sending a POST /rock (or json payload) should return a 200 OK response with the result in the body
+    Request
+    ```
+    {
+        "playerChoice": "paper"
+    }
+    ```
 
-</details>
+    Response
+    ```
+    {
+        "computerChoice": "rock"
+        "playerChoice": "paper"
+        "winner": "player"
+        "wins": 1
+        "losses": 0
+        "gamesPlayed": 1
+    }
+    ```
 
-#### What's next?
+- Should return a 400 BAD_REQUEST response error message in the body
+    
+    Endpoint `POST /` JSON Response - 400
 
-Once you've completed the challenges, you may like to review the [additional resources](<./4. additional resources.md>)
+    Request
+    ```
+    {
+        "playerChoice": ""
+    }
+    ```
+
+    Response
+    ```
+    {
+        "message": "YOUR REASON HERE"
+    }
+    ```
+- Commit and push your code to git
+
+======================== END OF LEVEL 2 Challenge ========================
+
