@@ -12,16 +12,15 @@ Create a CLI rock-paper-scissors game that prompts the player for a choice betwe
 
 ### Setup 
 
-2. Pull the branch specified to you from the `codeoff-rps` repository
+1. Sign in to GitHub via the popup using the provided credentials.
 
-3. Sign in to GitHub via the popup using the provided credentials.
+2. Clone the specified repository
 
-4. Open the cloned project in Visual Studio Code
+3. Open the cloned project in Visual Studio Code
 
+4. Make sure that GitHub Copilot is running in your editor by testing a short comment prompt: `// write a rock-paper-scissors game` 
 
-5. Make sure that GitHub Copilot is running in your editor by writing a short comment prompt: `// write a rock-paper-scissors game` 
-
-6. Get started writing code!
+5. Get started writing code!
 
 ======================== Please wait for the MCs to announce the start ========================
 
