@@ -12,7 +12,7 @@ Create a CLI rock-paper-scissors game that prompts the player for a choice betwe
 
 ### Setup 
 
-1. Sign in to GitHub via the popup using the provided credentials.
+1. Visit `https://github.com/kbtg-techtopia-code-off/[REPO NAME]
 
 2. Clone the specified repository
 
