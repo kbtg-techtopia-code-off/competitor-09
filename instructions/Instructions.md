@@ -10,7 +10,7 @@ Create a command line **rock-paper-scissors** game that prompts the player for a
 3. Java
 4. Python
 
-### Setup
+# Setup
 
 1. Visit `https://github.com/kbtg-techtopia-code-off/[REPO NAME]`
 
@@ -26,7 +26,8 @@ Create a command line **rock-paper-scissors** game that prompts the player for a
 <center>Please wait for the MCs to announce the start</center>
 
 ---
-<br/>
+
+<div style="page-break-after: always;"></div>
 
 # Level 1
 
@@ -77,7 +78,7 @@ You're now ready to start the [Level 2 Challenges](<./Level_2.md>) to see how yo
 
 ---
 
-<br/>
+<div style="page-break-after: always;"></div>
 
 # Level 2
 
@@ -111,6 +112,9 @@ $ Choose your option:
 - Commit and push your code to Git
 
 ---
+
+<div style="page-break-after: always;"></div>
+
 ## Challenge #3 - Adding Unit Tests
 
 ### Tasks
@@ -124,6 +128,9 @@ $ Choose your option:
 - Commit and push your code to Git
 
 ---
+
+<div style="page-break-after: always;"></div>
+
 ## Challenge #4 - Adding a REST API
 
 > 💡 Tips: You might want to create a new file or folder for this challenge to keep your original code from Challenges 1-2.
@@ -179,5 +186,3 @@ $ Choose your option:
 <center>END OF LEVEL 2</center>
 
 ---
-
-
