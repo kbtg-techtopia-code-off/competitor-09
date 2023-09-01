@@ -13,6 +13,9 @@ cd %F%
 
 :: Reclone the project
 
-git clone https://github.com/kbtg-techtopia-code-off/codeoff-rps.git .
+:: Replace the code-off rps in the Git URL with the parameter
+SET "GIT_URL=https://github.com/kbtg-techtopia-code-off/%1.git"
+
+git clone %GIT_URL% .
 
 git checkout -b %1
