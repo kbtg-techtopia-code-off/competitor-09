@@ -1,58 +1,122 @@
 // require promt from npm
 const prompt = require('prompt-sync')();
+const inquirer = require('inquirer');
 
 
  // write a function that randomly returns either ‘Rock’, ‘Paper’ or ‘Scissors’
 
     function computerPlay() {
-        let choices = ["rock", "paper", "scissors"];
+        let choices = ["rock", "paper", "scissors", "spock", "lizard"];
         let randomChoice = choices[Math.floor(Math.random() * choices.length)];
         return randomChoice;
     }
-
-// write a function that plays a single round of Rock Paper Scissors
-
 
 
 function playRound(playerSelection, computerSelection) {
     
         let player = playerSelection.toLowerCase();
         let computer = computerSelection.toLowerCase();
+
+        // recreate the game logic with normal rules for rocks paper and scissor but with additional rules for spock and lizard
+
         if (player === computer) {
             return "It's a tie!";
         } else if (player === "rock" && computer === "scissors") {
-            return "You win! Rock beats Scissors";
+            return 1
         } else if (player === "paper" && computer === "rock") {
-            return "You win! Paper beats Rock";
+            return 1
         } else if (player === "scissors" && computer === "paper") {
-            return "You win! Scissors beats Paper";
+            return 1
         } else if (player === "rock" && computer === "paper") {
-            return "You lose! Paper beats Rock";
+            return 0
         } else if (player === "paper" && computer === "scissors") {
-            return "You lose! Scissors beats Paper";
+            return 0
         } else if (player === "scissors" && computer === "rock") {
-            return "You lose! Rock beats Scissors";
-        } else {
+            return 0
+        } 
+        // spock beats rock
+        else if (player === "spock" && computer === "rock") {
+            return 1
+        }
+        else if (player === "rock" && computer === "spock") {
+            return 0
+        }
+         // spock beats scissors
+        else if (player === "spock" && computer === "scissors") {
+            return 1
+        }
+        else if (player === "scissors" && computer === "spock") {
+            return 0
+        }
+    // lizard beats spock
+        else if (player === "lizard" && computer === "spock") {
+            return 1
+        }
+        else if (player === "spock" && computer === "lizard") {
+            return 0
+        }
+        // paper beats spock
+
+        else if (player === "paper" && computer === "spock") {
+            return 1
+        }
+        else if (player === "spock" && computer === "paper") {
+            return 0
+        }
+        // lizard beats paper
+        else if (player === "lizard" && computer === "paper") {
+            return 1
+        }
+        else if (player === "paper" && computer === "lizard") {
+            return 0
+        }
+        // lizard beats spock
+        else if (player === "lizard" && computer === "spock") {
+            return 1
+        }
+        else if (player === "spock" && computer === "lizard") {
+            return 0
+        }
+        // rock beats lizard
+        else if (player === "rock" && computer === "lizard") {
+            return 1
+        }
+        else if (player === "lizard" && computer === "rock") {
+            return 0
+        }
+        // scissors beats lizard
+        else if (player === "scissors" && computer === "lizard") {
+            return 1
+        }
+        else if (player === "lizard" && computer === "scissors") {
+            return 0
+        }
+        else {
             return "Invalid input!";
         }
+
+
     }
 
 
-    // write a NEW function called game(). Use the previous function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end. Validate user input and do not play until te users input the correct input.
+  
 
-    //create afunction thaat gets the users input, but doesnt return until user inputs correct input
-    function getPlayerInput() {
-        let playerInput = prompt("Please input your choice >>> ");
-        let player = playerInput.toLowerCase();
-        while (player !== "rock" && player !== "paper" && player !== "scissors") {
-            console.log("Invalid input!");
-            playerInput = prompt("Please input your choice >>> ");
-            player = playerInput.toLowerCase();
-        }
-        return player;
+    // rewite getPlayerInput() to use inquirer, that allows user to select a choice from multiple options.
+    
+    function getPlayerInputFromOptions() {
+        return inquirer.prompt([
+            {
+                type: 'list',
+                name: 'player',
+                message: 'Please select your choice',
+                choices: ['rock', 'paper', 'scissors', 'lizard', 'spock']
+            }
+        ]).then(answers => {
+            return answers.player;
+        })
     }
 
-    function game() {
+    async function game() {
 
         let playerScore = 0;
         let computerScore = 0;
@@ -60,17 +124,16 @@ function playRound(playerSelection, computerSelection) {
 
         while (round < 5) {
             let computerSelection = computerPlay();
-            let playerSelection = getPlayerInput();
+            let playerSelection = await getPlayerInputFromOptions();
 
             // log computer and player inputs
             console.log(`The computer chose: ${computerSelection}`);
             console.log(`The player chose: ${playerSelection}`);
             let result = playRound(playerSelection, computerSelection);
-            console.log(result);
-            if (result.includes("win")) {
+            if (result) {
                 console.log('The winner is: player')
                 playerScore++;
-            } else if (result.includes("lose")) {
+            } else {
                 console.log('The winner is: computer')
                 computerScore++;
             }
