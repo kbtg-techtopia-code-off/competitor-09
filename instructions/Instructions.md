@@ -12,15 +12,9 @@ Create a command line **rock-paper-scissors** game that prompts the player for a
 
 # Setup
 
-1. Visit `https://github.com/kbtg-techtopia-code-off/[REPO NAME]`
+1. Make sure that GitHub Copilot is running in your editor by testing a short comment prompt: `// write a rock-paper-scissors game` 
 
-2. Clone the repository
-
-3. Open the cloned project in Visual Studio Code
-
-4. Make sure that GitHub Copilot is running in your editor by testing a short comment prompt: `// write a rock-paper-scissors game` 
-
-5. Get started writing code!
+2. Get started writing code!
 
 ---
 <center>Please wait for the MCs to announce the start</center>
@@ -190,3 +184,5 @@ $ Choose your option:
 <center>END OF LEVEL 2</center>
 
 ---
+
+
