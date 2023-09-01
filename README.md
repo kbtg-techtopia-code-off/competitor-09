@@ -115,6 +115,8 @@ $ Choose your option:
 
 <div style="page-break-after: always;"></div>
 
+# Level 2
+
 ## Challenge #3 - Adding Unit Tests
 
 ### Tasks
@@ -130,6 +132,8 @@ $ Choose your option:
 ---
 
 <div style="page-break-after: always;"></div>
+
+# Level 2
 
 ## Challenge #4 - Adding a REST API
 
