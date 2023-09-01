@@ -97,7 +97,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-
+app.use(bodyParser.json());
 
 
 app.post('/', (req, res) => {
