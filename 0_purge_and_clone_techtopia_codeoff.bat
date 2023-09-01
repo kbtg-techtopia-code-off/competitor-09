@@ -18,4 +18,4 @@ SET "GIT_URL=https://github.com/kbtg-techtopia-code-off/%1.git"
 
 git clone %GIT_URL% .
 
-git checkout -b %1
+git checkout main
