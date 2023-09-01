@@ -1,64 +1,183 @@
-# GitHub Copilot Workshop
+# KBTG Techtopia Codeoff
+### Instructions
 
-## Build a Rock, Paper, Scissors game from scratch with GitHub Copilot
-
-<img width="400" alt="Rock Paper Scissors image" src="./assets/Rock Paper Scissors image.png">
-
-In this fun workshop, you will learn how to use GitHub Copilot to build a simple game in Python, with little to no coding experience required.
-
-Estimated time to complete: `10 to 60 minutes`
-
-Participants will be guided to install the GitHub Copilot VS Code extension, follow a CodeTour to learn how to interact with GitHub Copilot, and then use GitHub Copilot to build a Rock, Paper, Scissors game from scratch. 
-
-Depending on the time available, participants will be able to complete the game or just get started, from a simple version all the way to introducing additional logic to make the game more interesting complete, with unit tests and REST API endpoints.
+Create a command line **rock-paper-scissors** game that prompts the player for a choice between `rock`, `paper,` or `scissors`; then randomizes the computer choice, and find out who's the winner. The program should keep track of the current round's winner, the player's score, the computer's score, and the number of games played.
 
 
+### Supported languages
+1. JavaScript
+2. Go
+3. Java
+4. Python
 
-## Instructions 
+### Setup
 
-Inside the `.instructions` folder you will find a number of markdown files that contain the instructions for this workshop.
+1. Visit `https://github.com/kbtg-techtopia-code-off/[REPO NAME]`
 
-Filename | Description
---- | ---
-[1. setup.md](</.instructions/1. setup.md>) | Instructions for installing the GitHub Copilot VS Code extension and joining the GitHub Copilot trial.
-[2. getting started.md](</.instructions/2. getting started.md>) | Instructions for getting started with GitHub Copilot.
-[3. challenge exercises.md](</.instructions/3. challenge exercises.md>) | Challenge exercises for participants to complete.
-[4. additional resources.md](</.instructions/4. additional resources.md>) | Additional resources for participants to explore after the workshop.
+2. Clone the repository
 
+3. Open the cloned project in Visual Studio Code
 
-## Running a workshop?
+4. Make sure that GitHub Copilot is running in your editor by testing a short comment prompt: `// write a rock-paper-scissors game` 
 
-If you're planning to run a GitHub Copilot workshop, please review the [workshop guide](</.instructions/workshop organisers.md>) for tips and tricks to help you run a successful workshop. 
+5. Get started writing code!
 
+---
+<center>Please wait for the MCs to announce the start</center>
 
-## Project Structure
+---
+<br/>
 
-In this project you will find: 
+# Level 1
 
-* a `main.py` file with no contents
-* a devcontainer that installs CodeTour and GitHub Copilot when the Codespace is created (If you want to use Codespaces)
-* an `.instructions` folder all the instructions for this workshop.
-* an `assets` folder containing images used in this workshop documentation.
-* a `.tours` folder that includes the CodeTour file if you wish to use it.
+## Challenge #1 - Write the rock-paper-scissors program
+Create a file to write your rock-paper-scissors game with an extension of your choice.
 
 
 
 
-## FAQ 
+### Tasks
 
-- **How do I get a GitHub Copilot license?**
-  - You can request a trial license from your GitHub Sales representative or via Copilot for Individuals or Business licenses.
-- **How do I get a GitHub Codespaces license?**
-    - Codespaces is included with GitHub Enterprise Cloud, GitHub Enterprise Server, and GitHub Free. You can check under your [billing settings page](https://github.com/settings/billing).
-- **I am having trouble activating GitHub Copilot after I load the plugin, what should I do?**
-    - This could be because you launched your Codespace before you activated GitHub Copilot or accepted the invitation to the trial org. Please try to reload your Codespace and try again.
+- The program prompts the user for an input between `rock`, `paper`, or `scissors` in the command line
+- The program randomizes the computer choice
+- The program outputs the round's result after the user submits in the terminal the choice as follow:
+    ```
+    Please input your choice >>> paper
 
-## Acknowledgements
+    The computer chose: rock
+    The player choice: paper
+    The winner is: player
+    Wins: 1
+    Losses: 0
+    Games played: 1
+    ======================== 
 
-A special thanks to the following awesome Hubbers who have contributed in many different ways to our workshops. 
-[blackgirlbytes](https://github.com/blackgirlbytes), [pierluigi](https://github.com/pierluigi), [yuichielectric](https://github.com/yuichielectric), [dchomh](https://github.com/dchomh), [nolecram](https://github.com/nolecram), [rsymo](https://github.com/rsymo), [damovisa](https://github.com/damovisa) and anyone else I've inadvertently missed.
+    Please input your choice >>> 
 
-Enjoy your workshop!
-[anthonyborton](https://github.com/anthonyborton)
+    ...
+    ```
+- After each round, the game prompts the player for the new choice and the game continues until the program is closed 
 
-_v1.0 Released May, 2023_
+### Bonus
+
+- The program checks for invalid user choice and asks the user to provide a valid input again. The program should not continue until the user provides a valid input.
+
+**Submission**
+- Capture the screenshot of the results and save it to the `/results` folder and name the file `1.jpg`. Example: `/results/1.jpg`
+- Commit and push your code to Git
+
+---
+
+>Hopefully your Paper, Rock, Scissors game is working! Remember, GitHub Copilot is probabilistic so you may not get the exact same code suggestions as we did. If you're not happy with the suggestions, you can always press **CTRL + Z** to undo the changes and try again.
+
+You're now ready to start the [Level 2 Challenges](<./Level_2.md>) to see how you can leverage the power of GitHub Copilot to solve more complex programming problems.
+
+---
+<center>END OF LEVEL 1</center>
+
+---
+
+<br/>
+
+# Level 2
+
+Now you've had an opportunity to get started using GitHub Copilot, we have a number of challenges for you to attempt. Remember the goal here is not to test your programming abilities but rather, see how you can use GitHub Copilot to help you complete these tasks. Even if you've never done these programming tasks before, you may be surprised how Copilot can help you be successful with these challenges.
+
+
+## Challenge #2 - Adding Lizard and Spock to the game
+
+### Tasks
+- Improve the rock paper scissors game by adding Lizard and Spock. Refer to this chart for the updated game logic
+
+    <img width="400" alt="Adding Lizard and Spock" src="../assets/Rock Paper Scissors Lizard Spock image.jpg">
+
+- Use the same CLI output from Chellenge #1
+
+### Bonus
+
+Extra Kudos for a terminal interface that provides a list of options with keyboard input.
+Eg.
+```
+$ Choose your option:
+1.  Rock
+2.  Paper
+3.  Scissors
+4.  Lizard
+5.  Spock
+```
+
+**Submission**
+- Capture the screenshot of the results and save it to the `/results` folder and name the file `3.jpg`. Example: `/results/3.jpg`
+- Commit and push your code to Git
+
+---
+## Challenge #3 - Adding Unit Tests
+
+### Tasks
+- Implement unit tests using using any testing module of your choice and capture the code coverage.
+
+### Bonus
+- Try to aim for over 80% coverage :)
+
+**Submission**
+- Capture the screenshot of the results and save it to the `/results` folder and name the file `3.jpg`. Example: `/results/3.jpg`
+- Commit and push your code to Git
+
+---
+## Challenge #4 - Adding a REST API
+
+> 💡 Tips: You might want to create a new file or folder for this challenge to keep your original code from Challenges 1-2.
+
+### Tasks
+
+- Turn your program into a REST API
+- Sending a POST request (or json payload) should return a 200 OK response with the result in the body
+
+    Endpoint `POST /` JSON Response - 200
+
+    Request
+    ```
+    {
+        "playerChoice": "paper"
+    }
+    ```
+
+    Response
+    ```
+    {
+        "computerChoice": "rock"
+        "playerChoice": "paper"
+        "winner": "player"
+        "wins": 1
+        "losses": 0
+        "gamesPlayed": 1
+    }
+    ```
+
+- Should return a 400 BAD_REQUEST response error message in the body
+    
+    Endpoint `POST /` JSON Response - 400
+
+    Request
+    ```
+    {
+        "playerChoice": ""
+    }
+    ```
+
+    Response
+    ```
+    {
+        "message": "YOUR REASON HERE"
+    }
+    ```
+**Submission**
+- Capture the results and save it to the `/results` folder and name the file `4.jpg`. Example: `/results/4.jpg`
+- Commit and push your code to Git
+
+---
+<center>END OF LEVEL 2</center>
+
+---
+
+
