@@ -5,12 +5,11 @@ const inquirer = require('inquirer');
 
  // write a function that randomly returns either ‘Rock’, ‘Paper’ or ‘Scissors’
 
-    function computerPlay() {
+function computerPlay() {
         let choices = ["rock", "paper", "scissors", "spock", "lizard"];
         let randomChoice = choices[Math.floor(Math.random() * choices.length)];
         return randomChoice;
-    }
-
+}
 
 function playRound(playerSelection, computerSelection) {
     
@@ -20,7 +19,7 @@ function playRound(playerSelection, computerSelection) {
         // recreate the game logic with normal rules for rocks paper and scissor but with additional rules for spock and lizard
 
         if (player === computer) {
-            return "It's a tie!";
+            return 3;
         } else if (player === "rock" && computer === "scissors") {
             return 1
         } else if (player === "paper" && computer === "rock") {
@@ -91,11 +90,6 @@ function playRound(playerSelection, computerSelection) {
         else if (player === "lizard" && computer === "scissors") {
             return 0
         }
-        else {
-            return "Invalid input!";
-        }
-
-
     }
 
 
@@ -130,12 +124,14 @@ function playRound(playerSelection, computerSelection) {
             console.log(`The computer chose: ${computerSelection}`);
             console.log(`The player chose: ${playerSelection}`);
             let result = playRound(playerSelection, computerSelection);
-            if (result) {
+            if (result === 1) {
                 console.log('The winner is: player')
                 playerScore++;
-            } else {
+            } else if (result ===0) {
                 console.log('The winner is: computer')
                 computerScore++;
+            } else {
+                console.log('It is a tie')
             }
             round++;
             console.log('Wins: ' + playerScore )
